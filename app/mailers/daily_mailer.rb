@@ -1,5 +1,6 @@
-class DailyMailer < ApplicationMailer
-  def dailymail
-    mail(:subject => "確認メール", bcc: User.pluck(:email))
-  end
+class DailMailer < ApplicationMailer
+    def confirmation
+        default to: -> { User.pluck(:email) }
+        mail(subject: "everyday Bookers!yay!")
+    end
 end

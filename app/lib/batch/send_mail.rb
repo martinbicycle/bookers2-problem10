@@ -1,5 +1,5 @@
 class Batch::SendMail
   def self.send_mail
-    DailyMailer.dailymail.deliver_now
+    DailyMailer.confirmation.deliver_now
   end
 end
